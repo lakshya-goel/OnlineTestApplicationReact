@@ -10,21 +10,19 @@ function App() {
   const [step, setStep] = useState('quiz');
 
   useEffect(() => {
-    // Fetch questions.json
-    fetch('/questions.json')
-      .then(response => response.json())
+    // Fetch from JSON server
+    fetch('http://localhost:4000/questions')
+      .then(res => res.json())
       .then(data => setQuestions(data));
 
-    // Fetch answers.json
-    fetch('/answers.json')
-      .then(response => response.json())
+    fetch('http://localhost:4000/answers')
+      .then(res => res.json())
       .then(data => {
-        // Transform answers array to a map { id: answerIndex }
-        const answersMap = {};
+        const map = {};
         data.forEach(item => {
-          answersMap[item.id] = item.answer;
+          map[item.id] = item.answer;
         });
-        setAnswersKey(answersMap);
+        setAnswersKey(map);
       });
   }, []);
 

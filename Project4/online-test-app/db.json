@@ -1,0 +1,36 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the capital of France?",
+      "options": ["Berlin", "Madrid", "Paris", "Rome"]
+    },
+    {
+      "id": 2,
+      "question": "What is 2 + 2?",
+      "options": ["3", "4", "5", "6"]
+    },
+    {
+      "id": 3,
+      "question": "Who wrote 'Hamlet'?",
+      "options": ["Charles Dickens", "William Shakespeare", "Mark Twain", "Jane Austen"]
+    },
+    {
+      "id": 4,
+      "question": "Which planet is known as the Red Planet?",
+      "options": ["Earth", "Venus", "Mars", "Jupiter"]
+    },
+    {
+      "id": 5,
+      "question": "What language is primarily used for web page structure?",
+      "options": ["Python", "HTML", "CSS", "Java"]
+    }
+  ],
+  "answers": [
+    { "id": 1, "answer": 2 },
+    { "id": 2, "answer": 1 },
+    { "id": 3, "answer": 1 },
+    { "id": 4, "answer": 2 },
+    { "id": 5, "answer": 1 }
+  ]
+}
