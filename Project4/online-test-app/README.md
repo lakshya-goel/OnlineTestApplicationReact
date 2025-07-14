@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# Online Test Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a **React-based Online Test Application** with a JSON Server backend to simulate a real REST API.  
+Users can take a quiz, review their answers, and see results instantly.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📌 **Features**
 
-### `npm start`
+- Loads questions and answers dynamically from a **JSON Server API**
+- Multi-step flow: **Quiz → Review → Result**
+- Uses React functional components and Hooks
+- Demonstrates API calls using `fetch()`
+- Runs React frontend and JSON Server **concurrently**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📁 **Project Structure**
 
-### `npm test`
+```
+online-test-app/
+├── public/
+│ ├── index.html
+├── src/
+│ ├── components/
+│ │ ├── Quiz.js
+│ │ ├── Review.js
+│ │ ├── Result.js
+│ ├── App.js
+│ ├── index.js
+├── db.json
+├── package.json
+├── README.md
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ⚙️ **Technologies Used**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **React** (with Hooks)
+- **JSON Server** (mock REST API)
+- **Concurrently** (to run multiple scripts)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🚀 **Getting Started**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1️⃣ **Clone the repo**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+git clone https://github.com/your-username/online-test-app.git
+cd online-test-app
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2️⃣ **Install dependencies**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+npm install
+```
 
-## Learn More
+3️⃣ **Run React + JSON Server together**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm run dev
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+📂 **JSON Server Endpoints**
+```
+GET /questions → Returns quiz questions
 
-### Code Splitting
+GET /answers → Returns correct answers
+```
+Edit db.json to update or add questions/answers.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+✅ **How to Add New Questions**
+Open db.json
 
-### Analyzing the Bundle Size
+Add your new question in the questions array:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+{
+  "id": 6,
+  "question": "New question?",
+  "options": ["Option1", "Option2", "Option3", "Option4"]
+}
+```
+Add the correct answer in the answers array:
 
-### Making a Progressive Web App
+```
+{
+  "id": 6,
+  "answer": 2
+}
+```
+✨ **Scripts**
+```
+npm start	Runs only the React app
+npm run json-server	Runs only the JSON Server
+npm run dev	Runs both React and JSON Server together using concurrently
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+👨‍💻 **Developer**
+Lakshya Goel
